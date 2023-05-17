@@ -12,8 +12,8 @@ class ProductController extends Controller
 
     public function index()
     {
-        $data = Product::with('category')->get()->sortByDesc('category.name');
 
+       $data = Product::with('category')->get()->sortByDesc('category.name');
        return view('quan-tri.product.index',['data'=>$data]);
 
     }
